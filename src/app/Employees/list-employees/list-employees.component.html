@@ -1,0 +1,25 @@
+<h1 class="text-center">list Employees</h1>
+<div class="container col-md-8">
+    <div class="card">
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th colspan="3" class="text-center">Actions</th>
+            </tr>
+            <tr *ngFor="let da of allData">
+                <th>{{da.id}}</th>
+                <th>{{da.name}}</th>
+                <th>{{da.Department}}</th>
+                <th>{{da.age}}</th>
+                <th>{{da.Salary}}</th>
+                <th><button class="btn bg-success">profile</button></th>
+                <th><a routerLink="/uEmployee/{{da.id}}" class="btn btn-info">Edit</a></th>
+                <th><button (click)="del(da.id)" class="btn bg-danger">Delete</button></th>
+            </tr>
+        </table>
+    </div>
+</div>
